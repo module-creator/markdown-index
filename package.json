@@ -6,7 +6,7 @@
   "scripts": {
     "type-check": "tsc",
     "prettier": "prettier --write",
-    "commit": "git-cz"
+    "commit": "commit"
   },
   "config": {
     "commitizen": {
