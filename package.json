@@ -4,7 +4,7 @@
   "description": "自动生成markDown 文档的索引导航",
   "main": "./src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "type-check": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,13 +17,16 @@
   },
   "homepage": "https://github.com/module-creator/markdown-index#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.25",
     "@types/node": "^13.1.1",
     "@typescript-eslint/eslint-plugin": "^2.13.0",
     "@typescript-eslint/parser": "^2.13.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
     "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
     "typescript": "^3.7.4"
   }
 }

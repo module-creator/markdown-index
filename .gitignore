@@ -22,8 +22,8 @@ worker/
 .env.production.local
 .idea
 .idea/
-/packages/**/*.js
-/packages/**/*.js.map
+/src/**/*.js
+/src/**/*.js.map
 !jest.config.js
 
 tempDownload/
