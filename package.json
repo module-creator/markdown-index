@@ -2,7 +2,7 @@
   "name": "markdown-index",
   "version": "1.0.0",
   "description": "自动生成markDown 文档的索引导航",
-  "main": ".eslintrc.js",
+  "main": "./src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,9 @@
     "@typescript-eslint/eslint-plugin": "^2.13.0",
     "@typescript-eslint/parser": "^2.13.0",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
     "typescript": "^3.7.4"
   }
 }
