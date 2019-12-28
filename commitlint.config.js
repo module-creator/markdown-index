@@ -1,9 +1,8 @@
-const { packages } = require('./utils/listPackages');
-
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    'header-max-length': [0],
-    'scope-enum': [2, 'always', ['root', ...packages]],
+    'type-enum': [2, 'always', ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore', 'revert']],
+    'subject-full-stop': [0, 'never'],
+    'subject-case': [0, 'never'],
   },
 };
