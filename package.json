@@ -1,0 +1,19 @@
+{
+  "name": "markdown-index",
+  "version": "1.0.0",
+  "description": "自动生成markDown 文档的索引导航",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/module-creator/markdown-index.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/module-creator/markdown-index/issues"
+  },
+  "homepage": "https://github.com/module-creator/markdown-index#readme"
+}
