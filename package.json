@@ -4,7 +4,30 @@
   "description": "自动生成markDown 文档的索引导航",
   "main": "./src/main.js",
   "scripts": {
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "prettier": "prettier --write",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "yarn prettier",
+      "git add"
+    ],
+    "**/*.{ts,spec.js,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
