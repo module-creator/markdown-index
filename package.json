@@ -4,9 +4,12 @@
   "description": "自动生成markDown 文档的索引导航",
   "main": "./src/main.js",
   "scripts": {
+    "lint": "eslint --ext .ts ./",
+    "lint:fix": "yarn lint --fix",
     "type-check": "tsc",
     "prettier": "prettier --write",
-    "commit": "commit"
+    "commit": "commit",
+    "test": "jest"
   },
   "config": {
     "commitizen": {
