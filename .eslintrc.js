@@ -9,14 +9,17 @@ module.exports = {
     '@typescript-eslint',
   ],
   extends: [
-    'plugin:@typescript-eslint/recommended',
+    'eslint:recommended',
     'prettier',
-    'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
   env: {
     node: true,
     browser: false,
   },
-  rules: {},
+  rules: {
+    '@typescript-eslint/no-var-requires': 1,
+  },
 };
