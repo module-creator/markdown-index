@@ -7,6 +7,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   extends: ['plugin:@typescript-eslint/recommended', 'prettier', 'prettier/@typescript-eslint'],
+  env: {
+    node: true,
+    browser: false,
+  },
   rules: {
     '@typescript-eslint/no-use-before-define': [2, { functions: false }],
     'no-unused-vars': 0,
