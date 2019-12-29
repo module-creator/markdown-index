@@ -1,3 +1,3 @@
-console.log(123);
-const userName = 'yanle';
-console.log(userName);
+import { readMDFiles } from './core/handle';
+
+readMDFiles();
