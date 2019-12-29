@@ -15,6 +15,8 @@ export const readMDFiles = (): void => {
   const paths = readMarkDownFilePath();
   paths.forEach(item => {
     const content = fse.readFileSync(item, { encoding: 'utf8' });
+    console.log(content.match(/\n####\s(.*)/g));
+
     const writeContent = content
       .replace(/\n#####\s(.*)/g, '\n<h5 id="$1">$1</h5>')
       .replace(/\n####\s(.*)/g, '\n<h4 id="$1">$1</h4>')
