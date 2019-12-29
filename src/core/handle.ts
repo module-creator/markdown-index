@@ -22,6 +22,7 @@ export const readMDFiles = (): void => {
     .replace(/^#\s(.*)/g, '<h1 id="$1">$1</h1>')
     .replace(/^##\s(.*)/g, '<h1 id="$1">$1</h1>');
   console.log(content);
+  fse.writeFileSync(paths[0], content);
   // console.log(content[0].match(/^##\s.*/m));
   // content[0].match(/###\s.*/g).forEach(item => {
   //   console.log(item);
