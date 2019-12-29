@@ -13,8 +13,11 @@ export const readMarkDownFilePath = (): string[] => {
 
 export const readMDFiles = (): void => {
   const paths = readMarkDownFilePath();
-  const contentList = paths.map(item => fse.readFileSync(item, { encoding: 'utf8' }));
-  const content = contentList[0]
+  const contentList = paths.map(item => ({
+    path: item,
+    content: fse.readFileSync(item, { encoding: 'utf8' }),
+  }));
+  const content = contentList[0].content
     .replace(/\n#####\s(.*)/g, '\n<h5 id="$1">$1</h5>')
     .replace(/\n####\s(.*)/g, '\n<h4 id="$1">$1</h4>')
     .replace(/\n###\s(.*)/g, '\n<h3 id="$1">$1</h3>')
@@ -22,9 +25,5 @@ export const readMDFiles = (): void => {
     .replace(/^#\s(.*)/g, '<h1 id="$1">$1</h1>')
     .replace(/^##\s(.*)/g, '<h1 id="$1">$1</h1>');
   console.log(content);
-  fse.writeFileSync(paths[0], content);
-  // console.log(content[0].match(/^##\s.*/m));
-  // content[0].match(/###\s.*/g).forEach(item => {
-  //   console.log(item);
-  // });
+  fse.writeFileSync(contentList[0].path, content);
 };
