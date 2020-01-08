@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es6",
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     //在表达式和声明上有隐含的any类型时报错
     "moduleResolution": "node",
     "typeRoots": [
@@ -33,7 +33,8 @@
     ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "test/**/*"
   ],
   "exclude": [
     "node_modules/",
